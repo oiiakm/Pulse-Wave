@@ -142,120 +142,122 @@ class CommandsViewModel extends GetxController {
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(16.0),
           ),
-          content: Container(
-            alignment: Alignment.center,
-            width: 350,
-            height: 400,
-            decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                colors: [
-                  Color.fromARGB(255, 49, 165, 191),
-                  Color.fromARGB(255, 220, 44, 140)
-                ],
-                begin: Alignment.topLeft,
-                end: Alignment.bottomRight,
+          content: SingleChildScrollView(
+            child: Container(
+              alignment: Alignment.center,
+              width: 350,
+              height: 400,
+              decoration: BoxDecoration(
+                gradient: const LinearGradient(
+                  colors: [
+                    Color.fromARGB(255, 49, 165, 191),
+                    Color.fromARGB(255, 220, 44, 140)
+                  ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                ),
+                borderRadius: BorderRadius.circular(16.0),
               ),
-              borderRadius: BorderRadius.circular(16.0),
-            ),
-            padding: const EdgeInsets.all(20.0),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    color: Colors.redAccent.withOpacity(0.5),
-                  ),
-                  padding: const EdgeInsets.all(12.0),
-                  child: const Text(
-                    'Edit Button',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                const SizedBox(
-                  height: 60,
-                ),
-                SizedBox(
-                  width: double.infinity,
-                  child: TextField(
-                    controller:
-                        TextEditingController(text: nameController.value),
-                    onChanged: (value) => nameController.value = value,
-                    style: const TextStyle(color: Colors.white, fontSize: 20),
-                    decoration: const InputDecoration(
-                      labelText: 'Button Name',
-                      labelStyle: TextStyle(color: Colors.white),
-                      fillColor: Color(0xFF004E64),
-                      filled: true,
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 16),
-                SizedBox(
-                  width: double.infinity,
-                  child: TextField(
-                    controller:
-                        TextEditingController(text: pressedController.value),
-                    onChanged: (value) => pressedController.value = value,
-                    style: const TextStyle(color: Colors.white, fontSize: 20),
-                    decoration: const InputDecoration(
-                      labelText: 'Button Pressed',
-                      labelStyle: TextStyle(color: Colors.white),
-                      fillColor: Color(0xFF004E64),
-                      filled: true,
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
-                      ),
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
-                      ),
-                    ),
-                  ),
-                ),
-                const SizedBox(height: 22),
-                ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.transparent,
-                    elevation: 0,
-                  ),
-                  onPressed: () async {
-                    final String updatedButtonName = nameController.value;
-                    final String updatedButtonPressed = pressedController.value;
-                    await updateButton(
-                      button.id,
-                      updatedButtonName,
-                      updatedButtonPressed,
-                    );
-                    Get.back();
-                    update();
-                  },
-                  child: Container(
-                    width: double.infinity,
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
                     decoration: BoxDecoration(
-                      gradient: const LinearGradient(
-                        colors: [Color(0xFF00B4DB), Color(0xFF0083B0)],
-                      ),
-                      borderRadius: BorderRadius.circular(16.0),
+                      color: Colors.redAccent.withOpacity(0.5),
                     ),
-                    padding: const EdgeInsets.symmetric(vertical: 14),
-                    child: const Center(
-                      child: Text(
-                        'Save',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
+                    padding: const EdgeInsets.all(12.0),
+                    child: const Text(
+                      'Edit Button',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
                       ),
                     ),
                   ),
-                ),
-              ],
+                  const SizedBox(
+                    height: 60,
+                  ),
+                  SizedBox(
+                    width: double.infinity,
+                    child: TextField(
+                      controller:
+                          TextEditingController(text: nameController.value),
+                      onChanged: (value) => nameController.value = value,
+                      style: const TextStyle(color: Colors.white, fontSize: 20),
+                      decoration: const InputDecoration(
+                        labelText: 'Button Name',
+                        labelStyle: TextStyle(color: Colors.white),
+                        fillColor: Color(0xFF004E64),
+                        filled: true,
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 16),
+                  SizedBox(
+                    width: double.infinity,
+                    child: TextField(
+                      controller:
+                          TextEditingController(text: pressedController.value),
+                      onChanged: (value) => pressedController.value = value,
+                      style: const TextStyle(color: Colors.white, fontSize: 20),
+                      decoration: const InputDecoration(
+                        labelText: 'Button Pressed',
+                        labelStyle: TextStyle(color: Colors.white),
+                        fillColor: Color(0xFF004E64),
+                        filled: true,
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
+                        ),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 22),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.transparent,
+                      elevation: 0,
+                    ),
+                    onPressed: () async {
+                      final String updatedButtonName = nameController.value;
+                      final String updatedButtonPressed = pressedController.value;
+                      await updateButton(
+                        button.id,
+                        updatedButtonName,
+                        updatedButtonPressed,
+                      );
+                      Get.back();
+                      update();
+                    },
+                    child: Container(
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [Color(0xFF00B4DB), Color(0xFF0083B0)],
+                        ),
+                        borderRadius: BorderRadius.circular(16.0),
+                      ),
+                      padding: const EdgeInsets.symmetric(vertical: 14),
+                      child: const Center(
+                        child: Text(
+                          'Save',
+                          style: TextStyle(color: Colors.white, fontSize: 20),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
         );

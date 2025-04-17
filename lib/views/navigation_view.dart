@@ -14,16 +14,10 @@ class NavigationView extends StatelessWidget {
         children: [
           Container(
             width: 120,
-            decoration: BoxDecoration(
-              gradient: const LinearGradient(
-                colors: <Color>[Colors.green, Colors.teal],
+            decoration: const BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Color(0xFFEEEEEE),Color(0xFFD2FFE8)],
               ),
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withOpacity(0.2),
-                  blurRadius: 10,
-                ),
-              ],
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,

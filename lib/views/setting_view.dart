@@ -61,11 +61,7 @@ class _SettingViewState extends State<SettingView> {
             gradient: LinearGradient(
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
-              colors: [
-                Colors.blue,
-                Colors.green,
-                Colors.black,
-              ],
+              colors: [Color(0xFF6B6BD1),Color(0xFFCCCCCC),Color(0xFF1A1F71)],
             ),
           ),
           child: Padding(

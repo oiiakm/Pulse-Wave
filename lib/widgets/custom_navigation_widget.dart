@@ -36,20 +36,20 @@ class CustomNavigationWidget extends StatelessWidget {
                 width: 2,
               ),
               color: isSelected ? color : Colors.transparent,
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.green.withOpacity(0.7),
-                  offset: const Offset(-3, -3),
-                  blurRadius: 5,
-                  spreadRadius: 2,
-                ),
-                BoxShadow(
-                  color: Colors.teal.withOpacity(0.7),
-                  offset: const Offset(-3, -3),
-                  blurRadius: 5,
-                  spreadRadius: 2,
-                ),
-              ],
+              // boxShadow: [
+              //   BoxShadow(
+              //     color: Colors.green.withOpacity(0.7),
+              //     offset: const Offset(-3, -3),
+              //     blurRadius: 5,
+              //     spreadRadius: 2,
+              //   ),
+              //   BoxShadow(
+              //     color: Colors.teal.withOpacity(0.7),
+              //     offset: const Offset(-3, -3),
+              //     blurRadius: 5,
+              //     spreadRadius: 2,
+              //   ),
+              // ],
             ),
             child: Center(
               child: Icon(

@@ -16,7 +16,7 @@ class DashboardView extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                colors: [Color(0xFF354B5E), Color(0xFF00A5A6)],
+                colors: [Color(0xFFB8B8F0),Color(0xFFEEEEEE),Color(0xFFD2FFE8)],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
               ),
