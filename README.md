@@ -1,6 +1,6 @@
 <html>
 <p align="center">
-  <img src="https://raw.githubusercontent.com/oiiakm/Laser-Slides/main/screenshots/app_logo.png"width="400" height="250">
+<!--   <img src="https://raw.githubusercontent.com/oiiakm/Laser-Slides/main/screenshots/app_logo.png"width="400" height="250"> -->
 </p>
 
 <p align="center">
